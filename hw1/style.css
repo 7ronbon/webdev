@@ -120,3 +120,18 @@ p , li {
     padding: 1rem;
     text-transform: uppercase;
 }
+
+table{
+    margin: auto;
+    text-align: center;
+    border-spacing: 3rem 0px;
+    th{
+        font-size: 2rem;
+        color: #8d6185;
+    }
+    td {
+        padding: 0.2em;
+        color:#6c2d5f;
+        font-size: 1.3rem;
+    }
+}
