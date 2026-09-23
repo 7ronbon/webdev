@@ -49,10 +49,24 @@ p , li {
     width: 100%;
 }
 
-#stars { color: b8a6a2}
+#stars { 
+    color: #b8a6a2;
+    float: right;
+}
 /* ipad and below rid of stars */
 @media only screen and (max-width: 1200px){
     #stars { display: none}
+}
+
+/* The Specificity Challenge */
+/* headings are all defaultly 8d6185 but i overrode that using id style for styling purposes. $b8a6a2 wins since its more specific than just generally selecting the h1 tag. i am targetting this specific h1 directly here and i WANT this to be b8a6a2  and not 8d6185 */
+#nameheading {
+    color: #b8a6a2; 
+    background-color: #8e3f4d; 
+    font-size: 3rem; 
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    padding: 0.2em;
 }
 
 #profilepic {
@@ -80,6 +94,8 @@ p , li {
 .textsection {
     min-width: 55%;
     padding: 1rem;
+    /* The Specificity Challenge */
+    /* h1 and h2 dont have specific sizes but i set them here. i overwrote the colors for h2 and h3 ONLY within the textsection class. this is more specific than just selecting h2 and h3 element generally, i am selecting hte h2 and h3 within textsection ONLY and changing their color and size to what i desire */
     h2 {
         color: #6c2d5f;
         font-weight:bolder;
@@ -134,4 +150,17 @@ table{
         color:#6c2d5f;
         font-size: 1.3rem;
     }
+}
+
+.sectionswappedthereforedifferentbackgroundcolor {
+    background-color: #ac9893;
+}
+
+.skillListBox {
+    padding: 2rem;
+}
+
+.desciptionTopBox {
+    padding: 1em; 
+    margin-top: 0px;
 }
