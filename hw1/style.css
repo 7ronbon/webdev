@@ -11,12 +11,8 @@ span {
     color: #8b7f88;
 }
 
-nav {
-    position: sticky;
-}
-
 nav , footer {
-    text-transform: lowercase;
+    text-transform: capitalize;
     padding: 0.5rem;
     font-size: 1.3rem;
     text-align: center;
@@ -28,9 +24,12 @@ nav , footer {
         text-decoration: none;
         color: #6c2d5f  ;
         font-weight: 800;
+        transition: color 0.3s ease;
     }
     a:hover {
         text-decoration: underline;
+        color:#8e3f4d;
+
     }
 }
 
@@ -41,6 +40,17 @@ h1, h2, h3, h4, h5, h6 {
 p , li {
     color: #6c2d5f;
     font-size: 1.3rem;
+}
+
+nav{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
+    p {
+        text-transform: uppercase;
+    }
 }
 
 .topBox , .infosection {
@@ -114,6 +124,7 @@ p , li {
   margin: auto;
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-gap: 0;
   padding: 0.5rem;
   width: 80%;
 }
@@ -156,6 +167,10 @@ table{
     background-color: #ac9893;
 }
 
+/* begone */
+.skillListBox { display: none;}
+
+
 .skillListBox {
     padding: 2rem;
 }
@@ -163,4 +178,50 @@ table{
 .desciptionTopBox {
     padding: 1em; 
     margin-top: 0px;
+}
+
+.projectBox {
+    display: grid;
+    flex-direction: column;
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+    grid-template-columns: auto auto auto;
+}
+
+.projectsection {
+    img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        background-color: #ac9893;
+        background-repeat: no-repeat;
+        margin-bottom: -1rem;
+    }
+}
+
+@media (max-width: 768px){
+    .grid-container {
+        grid-template-columns: 90%; 
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        a {
+            display: block;
+        }
+    }
+    .projectBox {
+        flex-direction: row;
+        grid-template-columns: auto;
+        .projectsection {
+            margin: auto;
+            img {
+                width: 97.8vw;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+        
+    }
 }
