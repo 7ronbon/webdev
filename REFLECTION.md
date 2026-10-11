@@ -1,4 +1,5 @@
 hw two
+
 flex direction row tells the computer to put things next to each other, while column tells the computer to stack each div on top of each other.
 it is important to use relative units and not set pixel as it allows the design to automatically change sizes according to the screen, and fits it nicely. if we were to use set pixels, the size of our object can vary greatly depending on how big our screen is, and we would have to hard code how big we want our text and such to be per device. if we were to use relative units, it solves this problem.
 
